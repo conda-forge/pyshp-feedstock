@@ -5,7 +5,7 @@ Home: https://pypi.python.org/pypi/pyshp
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Pure Python read/write support for ESRI Shapefile format.
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyshp-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pyshp-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyshp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyshp-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyshp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyshp-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyshp/badges/version.svg)](https://anaconda.org/conda-forge/pyshp)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyshp/badges/downloads.svg)](https://anaconda.org/conda-forge/pyshp)
 
 
 Updating pyshp-feedstock
