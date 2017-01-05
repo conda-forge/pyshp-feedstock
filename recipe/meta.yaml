@@ -1,35 +1,36 @@
 {% set version = "1.2.10" %}
 
 package:
-    name: pyshp
-    version: {{ version }}
+  name: pyshp
+  version: {{ version }}
 
 source:
-    fn: pyshp-{{ version }}.tar.gz
-    url: https://github.com/GeospatialPython/pyshp/archive/{{ version }}.tar.gz
-    sha256: 009e02b281d7f509c34d31aca3545334e45bea15136f3bb81a37b4d13e21f9bd
+  fn: pyshp-{{ version }}.tar.gz
+  url: https://github.com/GeospatialPython/pyshp/archive/{{ version }}.tar.gz
+  sha256: 009e02b281d7f509c34d31aca3545334e45bea15136f3bb81a37b4d13e21f9bd
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
+  build:
+    - python
+    - setuptools
+  run:
+    - python
 
 test:
-    imports:
-        - shapefile
+  imports:
+    - shapefile
 
 about:
-    home: https://pypi.python.org/pypi/pyshp
-    license: MIT
-    summary: 'Pure Python read/write support for ESRI Shapefile format.'
+  home: https://pypi.python.org/pypi/pyshp
+  license: MIT
+  license_file: LICENSE.TXT
+  summary: 'Pure Python read/write support for ESRI Shapefile format.'
 
 extra:
-    recipe-maintainers:
-        - pelson
-        - ocefpaf
+  recipe-maintainers:
+    - pelson
+    - ocefpaf
