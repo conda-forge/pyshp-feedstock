@@ -14,9 +14,7 @@ Summary: Pure Python read/write support for ESRI Shapefile format.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyshp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyshp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyshp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyshp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyshp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyshp-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pyshp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyshp-feedstock)
 
 Current release info
 ====================
