@@ -1,16 +1,16 @@
-{% set version = "1.2.11" %}
+{% set version = "1.2.12" %}
 
 package:
   name: pyshp
   version: {{ version }}
 
 source:
-  fn: pyshp-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pyshp/pyshp-{{ version }}.tar.gz
-  sha256: 8b4be2ec3d816067972e9ecc38526e9c45e9ee9b49b7fd94acfab9c0fc84fa63
+  sha256: 8dcd65e0aa2aa2951527ddb7339ea6e69023543d8a20a73fc51e2829b9ed6179
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
