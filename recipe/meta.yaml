@@ -9,12 +9,12 @@ source:
   sha256: 8dcd65e0aa2aa2951527ddb7339ea6e69023543d8a20a73fc51e2829b9ed6179
 
 build:
-  number: 0
+  number: 2
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -28,7 +28,7 @@ about:
   home: https://pypi.python.org/pypi/pyshp
   license: MIT
   license_file: LICENSE.TXT
-  summary: 'Pure Python read/write support for ESRI Shapefile format.'
+  summary: 'Pure Python read/write support for ESRI Shapefile format'
 
 extra:
   recipe-maintainers:
