@@ -1,4 +1,4 @@
-{% set version = "1.2.12" %}
+{% set version = "2.0.0" %}
 
 package:
   name: pyshp
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyshp/pyshp-{{ version }}.tar.gz
-  sha256: 8dcd65e0aa2aa2951527ddb7339ea6e69023543d8a20a73fc51e2829b9ed6179
+  sha256: dff308d52ac0f53a182c78b6a0e200997ed33bd847ca8d29e3f46e741012aa50
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
