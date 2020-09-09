@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: pyshp
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyshp/pyshp-{{ version }}.tar.gz
-  sha256: e65c7f24d372b97d0920b864bbeb78322bb37b83f2606e2a2212631d5d51e5c0
+  sha256: 0c317dbce9e1470310ce774a57b0dd0c69e55b2eae8673e9ac74aeed49f976e7
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -28,7 +28,7 @@ about:
   home: https://pypi.python.org/pypi/pyshp
   license: MIT
   license_file: LICENSE.TXT
-  summary: 'Pure Python read/write support for ESRI Shapefile format'
+  summary: Pure Python read/write support for ESRI Shapefile format
 
 extra:
   recipe-maintainers:
