@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: pyshp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyshp/pyshp-{{ version }}.tar.gz
-  sha256: 0eda209bd62f3345701c4f6799b638c114ceb67fee28295cddb4e1caf053e944
+  sha256: 825064ea403acf135e846cf8b0924499430e6be1cd37a0f34be7130906617d3c
 
 build:
   number: 0
