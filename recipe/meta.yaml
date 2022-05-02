@@ -1,17 +1,17 @@
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: pyshp
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyshp/pyshp-{{ version }}.tar.gz
-  sha256: 0eda209bd62f3345701c4f6799b638c114ceb67fee28295cddb4e1caf053e944
+  url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 8f482407d12ada3652de70f7ec07494047dc0766a1986e38506f1a24f6b07e0d
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -21,8 +21,17 @@ requirements:
     - python >=3.6
 
 test:
+  source_files:
+    - .
+  requires:
+    - pip
+    - pytest
   imports:
     - shapefile
+  commands:
+    - pip check
+    - python -c 'import shapefile; shapefile.test()'
+    - pytest
 
 about:
   home: https://pypi.python.org/pypi/pyshp
