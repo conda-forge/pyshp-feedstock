@@ -23,8 +23,6 @@ requirements:
 test:
   imports:
     - shapefile
-  commands:
-    - python -c 'import shapefile; shapefile.test()'
 
 about:
   home: https://pypi.python.org/pypi/pyshp
