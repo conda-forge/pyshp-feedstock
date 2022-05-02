@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyshp/pyshp-{{ version }}.tar.gz
-  sha256: 825064ea403acf135e846cf8b0924499430e6be1cd37a0f34be7130906617d3c
+  url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 8f482407d12ada3652de70f7ec07494047dc0766a1986e38506f1a24f6b07e0d
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -21,8 +21,17 @@ requirements:
     - python >=3.6
 
 test:
+  source_files:
+    - .
+  requires:
+    - pip
+    - pytest
   imports:
     - shapefile
+  commands:
+    - pip check
+    - python -c 'import shapefile; shapefile.test()'
+    - pytest
 
 about:
   home: https://pypi.python.org/pypi/pyshp
