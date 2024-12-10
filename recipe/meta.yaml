@@ -9,16 +9,16 @@ source:
   sha256: b64f8ee95e86c9357fd4b730a5743a0adcdc40b498bf1d2ec3cbc10bf54e495e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -26,6 +26,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - shapefile
   commands:
