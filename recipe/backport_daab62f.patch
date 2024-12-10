@@ -1,0 +1,11 @@
+--- pyshp-2.3.1.orig/test_shapefile.py	2022-07-27 21:48:24.000000000 +0200
++++ pyshp-2.3.1/test_shapefile.py	2024-12-10 09:46:06.757676792 +0100
+@@ -275,7 +275,7 @@
+             pass
+ 
+     # test reading zipfile from url
+-    url = "https://biogeo.ucdavis.edu/data/diva/rrd/NIC_rrd.zip"
++    url = "https://github.com/JamesParrott/PyShp_test_shapefile/raw/main/gis_osm_natural_a_free_1.zip"
+     with shapefile.Reader(url) as sf:
+         for recShape in sf.iterShapeRecords():
+             pass
