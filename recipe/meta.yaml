@@ -7,18 +7,21 @@ package:
 source:
   url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
   sha256: b64f8ee95e86c9357fd4b730a5743a0adcdc40b498bf1d2ec3cbc10bf54e495e
+  patches:
+    - backport_daab62f.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -26,6 +29,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - shapefile
   commands:
