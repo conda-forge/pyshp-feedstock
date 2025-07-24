@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
   sha256: 6abdd1b5ec05a42089a2864711b2eebd16501bf422296f4b8137e75d08ee19d5
-  patches:
-    - backport_daab62f.patch
 
 build:
   number: 0
