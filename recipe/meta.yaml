@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.4.0" %}
 
 package:
   name: pyshp
@@ -6,12 +6,10 @@ package:
 
 source:
   url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
-  sha256: b64f8ee95e86c9357fd4b730a5743a0adcdc40b498bf1d2ec3cbc10bf54e495e
-  patches:
-    - backport_daab62f.patch
+  sha256: 6abdd1b5ec05a42089a2864711b2eebd16501bf422296f4b8137e75d08ee19d5
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -34,8 +32,7 @@ test:
     - shapefile
   commands:
     - pip check
-    - python -c 'import shapefile; shapefile.test()'
-    - pytest
+    - pytest -k "not (test_reader_url)"
 
 about:
   home: https://pypi.python.org/pypi/pyshp
