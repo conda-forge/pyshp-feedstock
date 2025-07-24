@@ -32,7 +32,6 @@ test:
     - shapefile
   commands:
     - pip check
-    - python -c 'import shapefile; shapefile.test()'
     - pytest
 
 about:
