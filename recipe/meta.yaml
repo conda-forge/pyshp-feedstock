@@ -32,7 +32,7 @@ test:
     - shapefile
   commands:
     - pip check
-    - pytest
+    - pytest -k "not (test_reader_url)"
 
 about:
   home: https://pypi.python.org/pypi/pyshp
