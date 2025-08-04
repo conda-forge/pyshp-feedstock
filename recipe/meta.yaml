@@ -1,4 +1,4 @@
-{% set version = "2.4.1" %}
+{% set version = "3.0.0" %}
 
 package:
   name: pyshp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e546beab314bb8ecfa1ced86a1822eac159cc6403de11d5ce54cc9d26e9b8372
+  sha256: d8b4922373b2cb831a20af9d623e73f1ef7ffd97fde4643e1eb1ce8609bd572b
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
@@ -35,7 +35,7 @@ test:
     - pytest -k "not (test_reader_url)"
 
 about:
-  home: https://pypi.python.org/pypi/pyshp
+  home: https://github.com/GeospatialPython/pyshp
   license: MIT
   license_file: LICENSE.TXT
   summary: Pure Python read/write support for ESRI Shapefile format
