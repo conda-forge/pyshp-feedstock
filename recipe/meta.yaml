@@ -1,4 +1,4 @@
-{% set version = "3.0.9" %}
+{% set version = "3.0.12" %}
 
 package:
   name: pyshp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/GeospatialPython/pyshp/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 6a60e7752bdb08dfb7c7d6a58a536b0c3266bd85fb9e1117da5ea60cb16c4815
+  sha256: ee0be55f393a3c7c959a2fdd5b5a26a402c3e905a8d4fa6accd0aef9aa8f5031
 
 build:
   number: 0
