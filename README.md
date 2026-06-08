@@ -3,7 +3,7 @@ About pyshp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyshp-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/GeospatialPython/pyshp
+Home: https://pypi.org/project/pyshp/
 
 Package license: MIT
 

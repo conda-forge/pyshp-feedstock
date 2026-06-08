@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  version: "3.0.12"
+
+package:
+  name: pyshp
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/p/pyshp/pyshp-${{ version }}.tar.gz
+  sha256: 517f6d80be444f3e85ed3f08b004108845f535dee3efffc2fbca1ba93d22151d
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports: shapefile
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pytest
+        - hypothesis
+    files:
+      source:
+        - .
+    script:
+      - pytest -k "not (test_reader_url)"
+
+about:
+  summary: Pure Python read/write support for ESRI Shapefile format
+  license: MIT
+  license_file: LICENSE.TXT
+  homepage: https://pypi.org/project/pyshp/
+
+extra:
+  recipe-maintainers:
+    - pelson
+    - ocefpaf
