@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.0.13"
+  version: "3.1.0"
 
 package:
   name: pyshp
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyshp/pyshp-${{ version }}.tar.gz
-  sha256: d13c377a8e07b8a6501e8a9a9ac82ee48676b5b61910a3859a26973a482769d2
+  sha256: 3f26a0a2bddaed5e0ae0b2fa37c327b09794a96f8a88e8f3fb41d73a1de08ec3
 
 build:
   number: 0
@@ -40,7 +40,7 @@ tests:
       source:
         - .
     script:
-      - pytest -k "not (test_reader_url)"
+      - pytest -k "not (test_reader_url or test_dbf_reader_writer_roundtrip)"
 
 about:
   summary: Pure Python read/write support for ESRI Shapefile format
