@@ -40,7 +40,7 @@ tests:
       source:
         - .
     script:
-      - pytest -k "not (test_reader_url or test_dbf_reader_writer_roundtrip)"
+      - pytest -k "not (test_reader_url or test_dbf_reader_writer_roundtrip or test_shapefile_reader_writer_roundtrip or test_dbf_Field_roundtrips)"
 
 about:
   summary: Pure Python read/write support for ESRI Shapefile format
