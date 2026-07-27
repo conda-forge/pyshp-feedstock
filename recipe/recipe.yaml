@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.1.5"
+  version: "3.1.6"
 
 package:
   name: pyshp
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyshp/pyshp-${{ version }}.tar.gz
-  sha256: 80b642be725aed44a3e55888339f90a633d326f0bb93fb9600f1307e4f3d5410
+  sha256: 4c4b5a4138815c93defd6ebe50bae885b7e58984f431cdb7bb5d00718ac71daf
 
 build:
   number: 0
